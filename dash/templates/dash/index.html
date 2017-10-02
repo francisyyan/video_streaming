@@ -1,3 +1,5 @@
+{% load static %}
+
 <html lang="en">
 
 <head>
@@ -5,10 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DASH</title>
+  <link rel="stylesheet" href="{% static 'dash/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'dash/css/custom.css' %}"/>
 </head>
 
 <body>
-	<h2>Welcome to DASH</h2>
+  <div class="container">
+    <div class="text-center">
+      <h2>Test dash.js</h2>
+      <hr>
+      <video id="videoPlayer" controls></video>
+    </div>
+  </div>
+
+  <script src="{% static 'dash/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'dash/js/dash.all.min.js' %}"></script>
+  <script src="{% static 'dash/js/custom.js' %}"></script>
 </body>
 
 <html>
