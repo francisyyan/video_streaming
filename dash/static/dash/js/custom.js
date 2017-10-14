@@ -1,5 +1,8 @@
-(function(){
-  var url = "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd";
+var manifestUri = "/static/dash/videos/leno2.mpd";
+
+function initDash() {
   var player = dashjs.MediaPlayer().create();
-  player.initialize(document.querySelector("#videoPlayer"), url, true);
-})();
+  player.initialize(document.querySelector("#dashVideoPlayer"), manifestUri, true);
+};
+
+initDash()

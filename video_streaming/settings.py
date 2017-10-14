@@ -19,12 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['VIDEO_SK']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['35.203.174.255']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'video_db',
         'USER': 'video_user',
-        'PASSWORD': os.environ['DB_PWD'],
+        'PASSWORD': os.environ['VIDEO_DB'],
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -122,4 +122,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
