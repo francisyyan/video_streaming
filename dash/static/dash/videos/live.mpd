@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:mpeg:dash:schema:mpd:2011"
+     xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd"
+     type="dynamic"
+     profiles="urn:mpeg:dash:profile:isoff-live:2011"
+     minimumUpdatePeriod="PT60S"
+     minBufferTime="PT10S"
+     publishTime="2017-10-15T02:35:00Z"
+     availabilityStartTime="2017-10-15T05:52:00Z"
+     timeShiftBufferDepth="PT120S">
+  <Period id="0" start="PT0S">
+    <AdaptationSet id="0"
+                   contentType="video"
+                   mimeType="video/mp4"
+                   frameRate="30000/1001"
+                   segmentAlignment="true"
+                   startWithSAP="1">
+      <SegmentTemplate duration="2"
+                       initialization="video-init.mp4"
+                       media="video-1-$Number$.m4s"
+                       startNumber="1" />
+      <Representation id="0" bandwidth="300000" codecs="avc1.640028" width="1920" height="1080" />
+    </AdaptationSet>
+    <AdaptationSet id="1"
+                   contentType="audio"
+                   mimeType="audio/mp4"
+                   segmentAlignment="true"
+                   startWithSAP="1">
+      <SegmentTemplate duration="2"
+                       initialization="audio-init.mp4"
+                       media="audio-2-$Number$.m4s"
+                       startNumber="1" />
+      <Representation id="1" bandwidth="130000" codecs="mp4a.40.2" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>

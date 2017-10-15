@@ -1,4 +1,4 @@
-var manifestUri = "/static/dash/videos/leno2.mpd";
+var manifestUri = "/static/dash/videos/live.mpd";
 
 function initDash() {
   var player = dashjs.MediaPlayer().create();
