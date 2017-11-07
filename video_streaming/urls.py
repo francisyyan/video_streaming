@@ -19,5 +19,6 @@ from dash import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^mse-tests/', views.mse_tests, name='mse_tests'),
     url(r'^admin/', admin.site.urls),
 ]

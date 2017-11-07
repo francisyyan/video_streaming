@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MSE tests</title>
+    </head>
+    <body>
+        <h1>MSE tests</h1>
+        <ul>
+            <li id="mpeg-mp3">
+                <h2>MP3 inside no container</h2>
+                <audio controls></audio>
+                <ul class="console"></ul>
+            </li>
+            <li id="mp2t-mp3">
+                <h2>MP3 inside of an MPEG-TS container</h2>
+                <audio controls></audio>
+                <ul class="console"></ul>
+            </li>
+            <li id="mp4-mp3">
+                <h2>MP3 inside of an MP4 container</h2>
+                <audio controls></audio>
+                <ul class="console"></ul>
+            </li>
+            <li id="mp4-aac">
+                <h2>AAC inside of an MP4 container</h2>
+                <audio controls></audio>
+                <ul class="console"></ul>
+            </li>
+            <li id="mp4-opus">
+                <h2>Opus inside of an MP4 container</h2>
+                <audio controls></audio>
+                <ul class="console"></ul>
+            </li>
+            <li id="webm-opus">
+                <h2>Opus inside of a WebM container</h2>
+                <audio controls></audio>
+                <ul class="console"></ul>
+            </li>
+        </ul>
+
+        <script type="text/javascript">
+          var audio_mp3 = "{% static 'dash/audios/audio.mp3' %}";
+          var audio_mp3_ts = "{% static 'dash/audios/audio-mp3.ts' %}";
+          var audio_aac_mp4 = "{% static 'dash/audios/audio-aac.mp4' %}";
+          var audio_mp3_mp4 = "{% static 'dash/audios/audio-mp3.mp4' %}";
+          var audio_opus_webm = "{% static 'dash/audios/audio-opus.webm' %}";
+          var audio_opus_mp4 = "{% static 'dash/audios/audio-opus.mp4' %}";
+        </script>
+        <script src="{% static 'dash/js/mse_tests.js' %}"></script>
+    </body>
+</html>
