@@ -1,0 +1,28 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DASH</title>
+  <link rel="stylesheet" href="{% static 'dash/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'dash/css/custom.css' %}"/>
+</head>
+
+<body>
+  <div class="container">
+    <div class="text-center">
+      <h3>Shaka Player</h3>
+      <video class="videoPlayer" id="shakaVideoPlayer" autoplay controls></video>
+    </div>
+  </div>
+
+  <script src="{% static 'dash/js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'dash/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'dash/js/shaka-player.compiled.js' %}"></script>
+  <script src="{% static 'dash/js/shaka-custom.js' %}"></script>
+</body>
+
+<html>
