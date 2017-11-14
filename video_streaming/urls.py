@@ -18,7 +18,9 @@ from django.contrib import admin
 from dash import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.dashjs, name='index'),
+    url(r'^dashjs/$', views.dashjs, name='dashjs'),
+    url(r'^shaka/$', views.shaka, name='shaka'),
     url(r'^mse-tests/', views.mse_tests, name='mse_tests'),
     url(r'^admin/', admin.site.urls),
 ]
