@@ -1,4 +1,4 @@
-var manifestUri = "/static/dash/media/live-test.mpd";
+var manifestUri = "/static/dash/tv/live.mpd";
 
 // shaka player
 function initShaka() {
